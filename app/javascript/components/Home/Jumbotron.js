@@ -7,6 +7,30 @@ const Section = styled.section`
     padding: 100px 0;
     color: #fff;
 `
+const Header = styled.h1`
+    color: #fff;
+    font-weight: 700;
+    line-height: 52px;
+    font-size: 40px;
+`
+const Subhead = styled.p`
+    font-weight: 500;
+    font-size: 18px;
+`
+const Button = styled.a`
+    font-weight: bold;
+    cursor: pointer;
+    diplay: inline-block;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    width: 50%;
+    font-size: 18px;
+    background: #fff;
+    box-shadow: 0 0 0 3px #473228,
+      -6px 6px #ef5f17,
+      -6px 6px 0 3px #473228
+`
 
 function Jumbotron() {
     return (
@@ -15,8 +39,11 @@ function Jumbotron() {
                 <div className="row">
                     <div className="col col-sm-12 col-md-5">
                         <div className="pt-4 mt-4">
-                            <h1>React for Rails developers</h1>
-                            <p>Supercharge your Ruby on Rails apps with React.js</p>
+                            <Header>React for Rails Developers</Header>
+                            <Subhead>Supercharge your Ruby on Rails apps with React.js</Subhead>
+                            <div className="cta-wrapper">
+                                <Button className="btn fancy-btn">Get Started</Button>
+                            </div>
                         </div>
                     </div>
                     <div className="col col-sm-12 col-md-7">
