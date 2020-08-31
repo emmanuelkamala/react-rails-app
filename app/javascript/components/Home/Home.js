@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from './Jumbotron';
 import Table from './Table/Table';
+import axios from 'axios';
 
 export class Home extends Component {
   constructor(){
@@ -13,6 +14,20 @@ export class Home extends Component {
         { id: 4, title: '4. Adding react router dom to your App', description: 'lorem ipsum', active: false },
       ]
     }
+  }
+
+  componentDidMount(){
+    axios.get('/episodes.json')
+    .then(data => {
+      let res = []
+      data.data.data.map( data => {
+        res.push({ id: data.id, title: data.title, description: data.description, active: false })
+        this.setState({course_modules: res})
+      })
+    })
+    .catch(data => {
+
+    })
   }
 
   handleVideoChange(item, event) {
