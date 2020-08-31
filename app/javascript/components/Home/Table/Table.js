@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item';
+import ActiveItem from './ActiveItem';
 
 export class Table extends Component {
     constructor(props){
@@ -8,8 +9,11 @@ export class Table extends Component {
 
     render() {
         const items = this.props.course_modules.map(data => {
-            return <Item key={data.id} title={data.title} description={data.description} />
-        })
+            return (
+                data.active ? 
+                <ActiveItem handleVideoChange={this.props.handleVideoChange.bind(this, data)} key={data.id} title={data.title} description={data.description} />:
+                <Item handleVideoChange={this.props.handleVideoChange.bind(this, data)} key={data.id} title={data.title} description={data.description} />
+        )})
         return (
             <div className="pt-5 pb-5">
                 <div className="container">
