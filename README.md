@@ -3,6 +3,7 @@
 This is a project for building an app that list tutorials on how to add ReactJS to a Ruby on Rails app. Inside the app, there are tutorials from youtube showcasing how to connet ReactJS to a Ruby on Rails app or How to start a new app that is already bundled with ReactJS
 
 ![screenshot](./docs/images/react-rails.png)
+![screenshot](./docs/images/react-rails-2.png)
 
 ## Built With
 
@@ -13,7 +14,7 @@ This is a project for building an app that list tutorials on how to add ReactJS 
 - Webpack
 - Node
 - Ruby on Rails
-
+- Axios
 
 
 ## Live Version
